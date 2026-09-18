@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidade — Whats Capture</title>
+    <style>
+      :root {
+        --bg: #faf9f6;
+        --surface: #ffffff;
+        --border: #e5e1d8;
+        --text: #232620;
+        --text-muted: #6b6f66;
+        --accent: #1f9d5c;
+        --accent-bg: #eaf7f0;
+        --accent-border: #bfe8cf;
+        --placeholder-bg: #fff7e6;
+        --placeholder-border: #f0d999;
+        --placeholder-text: #8a6516;
+        --code-bg: #f0efe9;
+        color-scheme: light;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme='light']) {
+          --bg: #161813;
+          --surface: #1e211b;
+          --border: #33362d;
+          --text: #eceae2;
+          --text-muted: #a3a698;
+          --accent: #4cd486;
+          --accent-bg: #1d3327;
+          --accent-border: #2f5b40;
+          --placeholder-bg: #2e2712;
+          --placeholder-border: #5c4a1a;
+          --placeholder-text: #e0c164;
+          --code-bg: #24271f;
+        }
+      }
+
+      :root[data-theme='dark'] {
+        --bg: #161813;
+        --surface: #1e211b;
+        --border: #33362d;
+        --text: #eceae2;
+        --text-muted: #a3a698;
+        --accent: #4cd486;
+        --accent-bg: #1d3327;
+        --accent-border: #2f5b40;
+        --placeholder-bg: #2e2712;
+        --placeholder-border: #5c4a1a;
+        --placeholder-text: #e0c164;
+        --code-bg: #24271f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          'Source Sans 3',
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          sans-serif;
+        font-size: 16px;
+        line-height: 1.65;
+        padding-inline: 20px;
+        padding-block: 40px 60px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+        font-weight: 600;
+        color: var(--text);
+        line-height: 1.25;
+      }
+
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      header.doc-header {
+        margin-bottom: 36px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12.5px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 700;
+        margin-bottom: 14px;
+      }
+
+      .eyebrow::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+
+      h1 {
+        font-size: 34px;
+        margin: 0 0 10px;
+      }
+
+      .subtitle {
+        color: var(--text-muted);
+        font-size: 15px;
+        margin: 0;
+      }
+
+      .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 18px;
+        margin-top: 18px;
+        font-size: 13.5px;
+        color: var(--text-muted);
+      }
+
+      .meta-row strong {
+        color: var(--text);
+      }
+
+      .placeholder {
+        background: var(--placeholder-bg);
+        border: 1px solid var(--placeholder-border);
+        color: var(--placeholder-text);
+        padding: 1px 6px;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 0.95em;
+        white-space: nowrap;
+      }
+
+      nav.toc {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 18px 22px;
+        margin-bottom: 40px;
+      }
+
+      nav.toc h2 {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--text-muted);
+        margin: 0 0 10px;
+        font-family: inherit;
+        font-weight: 700;
+      }
+
+      nav.toc ol {
+        margin: 0;
+        padding-left: 20px;
+        columns: 2;
+        column-gap: 24px;
+        font-size: 14px;
+      }
+
+      nav.toc li {
+        margin-bottom: 6px;
+        break-inside: avoid;
+      }
+
+      nav.toc a {
+        color: var(--text);
+        text-decoration: none;
+      }
+
+      nav.toc a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+
+      section {
+        margin-bottom: 34px;
+        scroll-margin-top: 20px;
+      }
+
+      h2 {
+        font-size: 21px;
+        margin: 0 0 12px;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+      }
+
+      h2 .num {
+        color: var(--accent);
+        font-variant-numeric: tabular-nums;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      h3 {
+        font-size: 16px;
+        margin: 20px 0 8px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+
+      ul,
+      ol.plain {
+        margin: 0 0 12px;
+        padding-left: 22px;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      .muted {
+        color: var(--text-muted);
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin: 14px 0;
+      }
+
+      .card h3 {
+        margin-top: 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14.5px;
+        margin: 14px 0;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 9px 10px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+
+      th {
+        color: var(--text-muted);
+        font-weight: 600;
+        font-size: 12.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+
+      code {
+        background: var(--code-bg);
+        border-radius: 4px;
+        padding: 1px 5px;
+        font-size: 0.9em;
+        font-family: ui-monospace, 'SF Mono', Consolas, monospace;
+      }
+
+      .accent-box {
+        background: var(--accent-bg);
+        border: 1px solid var(--accent-border);
+        border-radius: 10px;
+        padding: 14px 18px;
+        font-size: 14.5px;
+        margin: 14px 0;
+      }
+
+      .placeholder-box {
+        background: var(--placeholder-bg);
+        border: 1px solid var(--placeholder-border);
+        color: var(--placeholder-text);
+        border-radius: 10px;
+        padding: 14px 18px;
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+
+      .placeholder-box strong {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 12.5px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      footer {
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+
+      img.max {
+        max-width: 100%;
+      }
+
+      @media (max-width: 520px) {
+        nav.toc ol {
+          columns: 1;
+        }
+        h1 {
+          font-size: 27px;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="doc-header">
+        <span class="eyebrow">Política de privacidade</span>
+        <h1>Whats Capture</h1>
+        <p class="subtitle">
+          Como esta extensão de navegador coleta, usa e protege dados — o seu,
+          enquanto usuário, e o de terceiros extraídos de grupos do WhatsApp
+          Web.
+        </p>
+        <div class="meta-row">
+          <span
+            ><strong>Vigente desde:</strong>
+            <span class="placeholder">18/06/2026</span></span
+          >
+          <span
+            ><strong>Última atualização:</strong>
+            <span class="placeholder">18/06/2026</span></span
+          >
+          <span><strong>Versão da extensão:</strong> 0.1.0</span>
+        </div>
+      </header>
+
+      <div class="placeholder-box">
+        <strong>Antes de publicar</strong>
+        Substitua todo texto marcado como
+        <span class="placeholder">[EXEMPLO]</span> — nome do responsável, e-mail
+        de contato e datas — pelos dados reais antes de divulgar este link.
+      </div>
+
+      <nav class="toc" aria-label="Sumário">
+        <h2>Nesta página</h2>
+        <ol>
+          <li><a href="#quem-somos">1. Quem trata os dados</a></li>
+          <li><a href="#o-que-a-extensao-faz">2. O que a extensão faz</a></li>
+          <li><a href="#dados-que-coletamos">3. Dados que coletamos</a></li>
+          <li>
+            <a href="#dados-de-terceiros"
+              >4. Dados de participantes de grupos</a
+            >
+          </li>
+          <li><a href="#como-usamos">5. Como usamos os dados</a></li>
+          <li><a href="#onde-fica">6. Onde os dados ficam armazenados</a></li>
+          <li>
+            <a href="#compartilhamento">7. Compartilhamento com terceiros</a>
+          </li>
+          <li><a href="#retencao">8. Retenção e exclusão</a></li>
+          <li><a href="#seguranca">9. Segurança</a></li>
+          <li><a href="#direitos">10. Seus direitos</a></li>
+          <li><a href="#permissoes">11. Permissões do navegador</a></li>
+          <li><a href="#criancas">12. Uso por menores</a></li>
+          <li><a href="#alteracoes">13. Alterações nesta política</a></li>
+          <li><a href="#contato">14. Contato</a></li>
+        </ol>
+      </nav>
+
+      <section id="quem-somos">
+        <h2><span class="num">1</span> Quem trata os dados</h2>
+        <p>
+          Esta extensão é desenvolvida e operada por
+          <span class="placeholder">Arpdev Desenvolvimento</span>
+          (“nós”), responsável pelo tratamento dos dados pessoais descritos
+          nesta política, nos termos da Lei Geral de Proteção de Dados (Lei nº
+          13.709/2018 — LGPD).
+        </p>
+        <p>
+          Dúvidas, solicitações ou reclamações sobre privacidade podem ser
+          enviadas para
+          <span class="placeholder">arpdevdesenvolvimento@gmail.com</span>.
+        </p>
+      </section>
+
+      <section id="o-que-a-extensao-faz">
+        <h2><span class="num">2</span> O que a extensão faz</h2>
+        <p>
+          O Whats Capture é uma extensão para Google Chrome que extrai a lista
+          de participantes de um grupo aberto pelo próprio usuário no WhatsApp
+          Web (nome, telefone, se é administrador do grupo e se é conta
+          comercial), a partir apenas da interface visível na tela, e permite
+          exportar esses dados em JSON ou CSV.
+        </p>
+        <p class="muted">
+          A extensão não lê conteúdo de mensagens ou conversas, não envia nem
+          automatiza mensagens no WhatsApp, e não usa nenhuma API privada,
+          interna ou não documentada do WhatsApp — apenas lê o que já está
+          visível na tela para o usuário logado.
+        </p>
+      </section>
+
+      <section id="dados-que-coletamos">
+        <h2><span class="num">3</span> Dados que coletamos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Dado</th>
+              <th>Quando</th>
+              <th>Finalidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>E-mail e senha (com hash)</td>
+              <td>Criação de conta e login</td>
+              <td>
+                Autenticar o uso da extensão e vincular o saldo de créditos
+              </td>
+            </tr>
+            <tr>
+              <td>Números de telefone extraídos</td>
+              <td>Cada extração enviada ao nosso servidor</td>
+              <td>
+                Controlar o consumo de créditos (evitar cobrar duas vezes pelo
+                mesmo número) e liberar o download
+              </td>
+            </tr>
+            <tr>
+              <td>Saldo de créditos e histórico de cupons resgatados</td>
+              <td>Uso contínuo da conta</td>
+              <td>
+                Cobrança do uso comercial da extração e controle de promoções
+              </td>
+            </tr>
+            <tr>
+              <td>Nome, status de admin/conta comercial dos participantes</td>
+              <td>Cada extração</td>
+              <td>
+                Exibidos e exportados
+                <strong>somente no seu navegador</strong> — não são enviados ao
+                nosso servidor
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="accent-box">
+          Só os <strong>números de telefone</strong> extraídos são enviados ao
+          nosso backend, e apenas para controle de créditos. Nomes e os demais
+          campos ficam salvos exclusivamente no armazenamento local do seu
+          navegador (<code>chrome.storage.local</code>) e nunca saem da sua
+          máquina, exceto quando você mesmo os baixa como arquivo.
+        </div>
+      </section>
+
+      <section id="dados-de-terceiros">
+        <h2>
+          <span class="num">4</span> Dados de participantes de grupos
+          (terceiros)
+        </h2>
+        <p>
+          Ao extrair um grupo, a extensão processa dados pessoais de pessoas que
+          não são a usuária ou o usuário da extensão — os demais participantes
+          do grupo. Essas pessoas não têm relação direta conosco; quem decide
+          extrair os dados e como usá-los depois é quem opera a extensão.
+        </p>
+        <p>
+          Ao usar o Whats Capture, você declara que tem uma base legal válida
+          (LGPD, art. 7º) para coletar e usar os dados de contato dos
+          participantes do grupo — por exemplo, legítimo interesse em prospecção
+          comercial de um grupo que você administra ou do qual participa —, e
+          que assume a responsabilidade pelo uso posterior desses dados,
+          incluindo eventuais pedidos de exclusão feitos por essas pessoas
+          diretamente a você.
+        </p>
+      </section>
+
+      <section id="como-usamos">
+        <h2><span class="num">5</span> Como usamos os dados</h2>
+        <ul>
+          <li>
+            Autenticar seu login e manter sua sessão ativa no popup da extensão.
+          </li>
+          <li>
+            Calcular e debitar o custo de cada extração do seu saldo de
+            créditos.
+          </li>
+          <li>
+            Evitar cobrança duplicada por um número de telefone já extraído
+            anteriormente.
+          </li>
+          <li>Processar resgates de cupons de crédito.</li>
+          <li>Gerar os arquivos de exportação (JSON/CSV) que você baixa.</li>
+        </ul>
+        <p class="muted">
+          Não usamos os dados para publicidade, perfilamento, pontuação de
+          crédito/empréstimo, nem para treinar modelos de IA.
+        </p>
+      </section>
+
+      <section id="onde-fica">
+        <h2><span class="num">6</span> Onde os dados ficam armazenados</h2>
+        <h3>No seu navegador</h3>
+        <p>
+          Sessão de login, a última extração completa (incluindo nomes) e
+          preferências de exportação — via <code>chrome.storage.local</code>,
+          isolado por perfil de navegador, nunca sincronizado pela extensão para
+          fora da sua máquina.
+        </p>
+        <h3>No nosso servidor</h3>
+        <p>
+          Conta (e-mail, senha com hash), saldo de créditos, números de telefone
+          extraídos e histórico de cupons resgatados, hospedados em
+          <span class="placeholder">hostinger.com</span>.
+        </p>
+      </section>
+
+      <section id="compartilhamento">
+        <h2><span class="num">7</span> Compartilhamento com terceiros</h2>
+        <p>
+          Não vendemos, alugamos nem compartilhamos seus dados com terceiros
+          para fins de publicidade ou qualquer finalidade alheia ao
+          funcionamento da extensão. Os dados podem ser acessados por:
+        </p>
+        <ul>
+          <li>
+            Prestadores de infraestrutura estritamente necessários para operar o
+            servidor (ex.: provedor de hospedagem/banco de dados), sob obrigação
+            contratual de confidencialidade.
+          </li>
+          <li>
+            Autoridades públicas, quando exigido por lei ou ordem judicial.
+          </li>
+        </ul>
+      </section>
+
+      <section id="retencao">
+        <h2><span class="num">8</span> Retenção e exclusão</h2>
+        <p>
+          Mantemos os dados da sua conta enquanto ela existir. Para solicitar a
+          exclusão da sua conta e dos dados associados (e-mail, telefones
+          salvos, histórico de créditos), envie um pedido para
+          <span class="placeholder">arpdevdesenvolvimento@gmail.com</span>. Hoje
+          esse processo é feito manualmente por um administrador após a
+          confirmação do pedido; não há ainda um botão de autoexclusão dentro da
+          extensão.
+        </p>
+        <p class="muted">
+          Respondemos e processamos pedidos de exclusão em até
+          <span class="placeholder">20</span> dias úteis.
+        </p>
+      </section>
+
+      <section id="seguranca">
+        <h2><span class="num">9</span> Segurança</h2>
+        <ul>
+          <li>Senhas nunca são armazenadas em texto puro — apenas seu hash.</li>
+          <li>Toda comunicação entre a extensão e o servidor usa HTTPS.</li>
+          <li>
+            O acesso à área administrativa é protegido por sessão com cookies
+            <code>httpOnly</code> e rotação de token.
+          </li>
+          <li>
+            Nenhum dado sensível é exposto em URLs ou logs de forma legível.
+          </li>
+        </ul>
+      </section>
+
+      <section id="direitos">
+        <h2><span class="num">10</span> Seus direitos</h2>
+        <p>
+          Nos termos da LGPD, você pode solicitar a qualquer momento, pelo
+          contato indicado abaixo:
+        </p>
+        <ul>
+          <li>Confirmação de que tratamos seus dados, e acesso a eles.</li>
+          <li>Correção de dados incompletos, inexatos ou desatualizados.</li>
+          <li>Exclusão dos dados tratados com seu consentimento.</li>
+          <li>
+            Portabilidade dos dados a outro fornecedor, mediante requisição.
+          </li>
+          <li>Informação sobre com quem compartilhamos seus dados.</li>
+        </ul>
+      </section>
+
+      <section id="permissoes">
+        <h2><span class="num">11</span> Permissões do navegador</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Permissão</th>
+              <th>Para quê</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>storage</code></td>
+              <td>Guardar localmente a sessão de login e a última extração.</td>
+            </tr>
+            <tr>
+              <td><code>downloads</code></td>
+              <td>Gerar o download dos arquivos JSON/CSV exportados.</td>
+            </tr>
+            <tr>
+              <td><code>https://web.whatsapp.com/*</code></td>
+              <td>
+                Ler a lista de participantes do grupo aberto (content script).
+              </td>
+            </tr>
+            <tr>
+              <td>Domínio do nosso backend</td>
+              <td>
+                Autenticação, saldo de créditos e registro dos telefones
+                extraídos.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="criancas">
+        <h2><span class="num">12</span> Uso por menores</h2>
+        <p>
+          Esta extensão é destinada a uso profissional/comercial e não é
+          direcionada a menores de 18 anos. Não coletamos intencionalmente dados
+          de crianças ou adolescentes.
+        </p>
+      </section>
+
+      <section id="alteracoes">
+        <h2><span class="num">13</span> Alterações nesta política</h2>
+        <p>
+          Podemos atualizar esta política periodicamente. Alterações relevantes
+          serão indicadas pela data de "Última atualização" no topo desta
+          página. O uso continuado da extensão após uma atualização representa
+          concordância com os novos termos.
+        </p>
+      </section>
+
+      <section id="contato">
+        <h2><span class="num">14</span> Contato</h2>
+        <p>
+          <span class="placeholder">Arpdev Desenvolvimento</span><br />
+          E-mail:
+          <span class="placeholder">arpdevdesenvolvimento@gmail.com</span>
+        </p>
+      </section>
+
+      <footer>
+        Whats Capture não é afiliada, endossada ou mantida pela WhatsApp Inc. ou
+        pela Meta Platforms, Inc. “WhatsApp” é marca registrada de seus
+        respectivos proprietários.
+      </footer>
+    </div>
+  </body>
+</html>
